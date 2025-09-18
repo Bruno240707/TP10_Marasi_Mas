@@ -1,0 +1,53 @@
+.dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .filtros {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filtros button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .filtros button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .filtros button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .lista-pedidos .pedido {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #fafafa;
+  }
+  
+  .lista-pedidos .pedido h3 {
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .lista-pedidos .pedido ul {
+    padding-left: 1.2rem;
+  }
+  
+  .lista-pedidos .pedido .total {
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
