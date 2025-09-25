@@ -15,11 +15,8 @@ const Navbar = () => {
       </button>
 
       <ul>
-        <Link to="/"><p>Home</p></Link>
-
-        <Link to="/QuienesSomos"><p>Quienes somos</p></Link>
-
-        <Link to="/Contacto"><p>Contacto</p></Link>
+        <Link to="/" style={{ marginRight: "10px" }}>Dashboard</Link>
+        <Link to="/new-order">Nuevo Pedido</Link>
       </ul>
     </nav>
   );
