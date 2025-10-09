@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
+import "../../src/views/Dashboard/Dashboard.css";
 
 const OrderStats = ({ total, pending, shipped, delivered }) => {
   return (
-    <div style={{ marginBottom: "20px" }}>
+    <div className="stats-section">
       <h3>Estadísticas</h3>
       <p>Total: {total}</p>
       <p>Pending: {pending}</p>

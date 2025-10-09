@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
 import OrderItem from "./OrderItem";
+import "../views/Dashboard/Dashboard.css";
 
 const OrderList = ({ orders }) => {
   return (
-    <div>
+    <div className="orders-section">
+      <h2>Lista de Pedidos</h2>
       {orders.map(order => (
         <OrderItem
           key={order.id}

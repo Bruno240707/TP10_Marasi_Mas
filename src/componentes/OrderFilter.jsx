@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
+import "../views/Dashboard/Dashboard.css";
 
 const OrderFilter = ({ filter, setFilter }) => {
   return (
-    <div style={{ marginBottom: "10px" }}>
+    <div className="filter-section">
       <label>Filtrar por estado: </label>
       <select value={filter} onChange={(e) => setFilter(e.target.value)}>
         <option value="">Todos</option>

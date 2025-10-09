@@ -3,6 +3,7 @@ import arrayPedidos from "../../arrayPedidos";
 import OrderFilter from "../../componentes/OrderFilter";
 import OrderList from "../../componentes/OrderList";
 import OrderStats from "../../componentes/OrderStats";
+import "./Dashboard.css";
 
 export default function Dashboard() {
   const [orders, setOrders] = useState(arrayPedidos());
@@ -18,7 +19,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>x
+    <div className="dashboard">
       <h1>📊 Dashboard</h1>
       <OrderStats {...stats} />
       <OrderFilter filter={filter} setFilter={setFilter} />
