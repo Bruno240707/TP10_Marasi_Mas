@@ -1,11 +1,18 @@
-import PropTypes from "prop-types";
 import "../views/Dashboard/Dashboard.css";
 
-const OrderFilter = ({ filter, setFilter }) => {
+interface OrderFilterProps {
+  filter: "" | "pending" | "shipped" | "delivered";
+  setFilter: (value: "" | "pending" | "shipped" | "delivered") => void;
+}
+
+function OrderFilter({ filter, setFilter }: OrderFilterProps) {
   return (
     <div className="filter-section">
       <label>Filtrar por estado: </label>
-      <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+      <select
+        value={filter}
+        onChange={(e) => setFilter(e.target.value as "" | "pending" | "shipped" | "delivered")}
+      >
         <option value="">Todos</option>
         <option value="pending">Pending</option>
         <option value="shipped">Shipped</option>
@@ -13,11 +20,6 @@ const OrderFilter = ({ filter, setFilter }) => {
       </select>
     </div>
   );
-};
-
-OrderFilter.propTypes = {
-  filter: PropTypes.oneOf(["", "pending", "shipped", "delivered"]),
-  setFilter: PropTypes.func.isRequired
-};
+}
 
 export default OrderFilter;

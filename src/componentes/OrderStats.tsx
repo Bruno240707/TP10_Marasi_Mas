@@ -1,7 +1,13 @@
-import PropTypes from "prop-types";
 import "../../src/views/Dashboard/Dashboard.css";
 
-const OrderStats = ({ total, pending, shipped, delivered }) => {
+interface OrderStatsProps {
+  total: number;
+  pending: number;
+  shipped: number;
+  delivered: number;
+}
+
+function OrderStats({ total, pending, shipped, delivered }: OrderStatsProps) {
   return (
     <div className="stats-section">
       <h3>Estadísticas</h3>
@@ -11,13 +17,6 @@ const OrderStats = ({ total, pending, shipped, delivered }) => {
       <p>Delivered: {delivered}</p>
     </div>
   );
-};
-
-OrderStats.propTypes = {
-  total: PropTypes.number.isRequired,
-  pending: PropTypes.number.isRequired,
-  shipped: PropTypes.number.isRequired,
-  delivered: PropTypes.number.isRequired
-};
+}
 
 export default OrderStats;

@@ -4,7 +4,7 @@ import "./App.css";
 import arrayPedidos from "./arrayPedidos";
 
 // Layout
-import MainLayout from "./layouts/MainLayout";
+import MainLayout from "./layouts/mainLayout";
 
 // Views
 import Dashboard from "./views/Dashboard/Dashboard";
