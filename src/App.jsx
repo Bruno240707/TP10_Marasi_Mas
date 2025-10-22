@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter ,Routes, Route } from "react-router-dom";
 import "./App.css";
 import arrayPedidos from "./arrayPedidos";
 
@@ -14,12 +14,14 @@ function App() {
   const [pedidos, setPedidos] = useState(arrayPedidos());
 
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Dashboard pedidos={pedidos} setPedidos={setPedidos} />} />
-        <Route path="/new-order" element={<NewOrder />} />
-      </Route>
-    </Routes>
+
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Dashboard pedidos={pedidos} setPedidos={setPedidos} />} />
+          <Route path="/new-order" element={<NewOrder />} />
+        </Route>
+      </Routes>
+
   );
 }
 
