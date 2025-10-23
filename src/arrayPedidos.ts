@@ -1,5 +1,13 @@
     
-const arrayPedidos = () => {
+interface Order {
+  id: number;
+  customer: string;
+  items: { productId: number; name: string; quantity: number; price: number; }[];
+  status: "pending" | "shipped" | "delivered";
+  date: Date;
+}
+
+const arrayPedidos = (): Order[] => {
     return [
         {
           id: 1,
@@ -8,7 +16,7 @@ const arrayPedidos = () => {
             { productId: 101, name: "Mouse inalámbrico", quantity: 2, price: 3500 },
             { productId: 102, name: "Teclado mecánico", quantity: 1, price: 12500 },
           ],
-          status: "pending",
+          status: "pending" as const,
           date: new Date("2025-09-10"),
         },
         {
@@ -18,7 +26,7 @@ const arrayPedidos = () => {
             { productId: 103, name: "Auriculares Bluetooth", quantity: 1, price: 8900 },
             { productId: 104, name: "Cargador USB-C", quantity: 3, price: 2200 },
           ],
-          status: "shipped",
+          status: "shipped" as const,
           date: new Date("2025-09-11"),
         },
         {
@@ -27,7 +35,7 @@ const arrayPedidos = () => {
           items: [
             { productId: 105, name: "Monitor 24''", quantity: 1, price: 48900 },
           ],
-          status: "delivered",
+          status: "delivered" as const,
           date: new Date("2025-09-12"),
         },
         {
@@ -37,7 +45,7 @@ const arrayPedidos = () => {
             { productId: 106, name: "Notebook 15''", quantity: 1, price: 250000 },
             { productId: 107, name: "Mochila para notebook", quantity: 1, price: 15000 },
           ],
-          status: "pending",
+          status: "pending" as const,
           date: new Date("2025-09-13"),
         },
         {
@@ -47,7 +55,7 @@ const arrayPedidos = () => {
             { productId: 108, name: "Smartphone 128GB", quantity: 1, price: 180000 },
             { productId: 109, name: "Funda protectora", quantity: 2, price: 3500 },
           ],
-          status: "shipped",
+          status: "shipped" as const,
           date: new Date("2025-09-14"),
         },
         {
@@ -56,7 +64,7 @@ const arrayPedidos = () => {
           items: [
             { productId: 110, name: "Tablet 10''", quantity: 1, price: 120000 },
           ],
-          status: "delivered",
+          status: "delivered" as const,
           date: new Date("2025-09-14"),
         },
         {
@@ -66,7 +74,7 @@ const arrayPedidos = () => {
             { productId: 111, name: "Impresora multifunción", quantity: 1, price: 65000 },
             { productId: 112, name: "Resma papel A4", quantity: 5, price: 1500 },
           ],
-          status: "pending",
+          status: "pending" as const,
           date: new Date("2025-09-15"),
         },
         {
@@ -77,7 +85,7 @@ const arrayPedidos = () => {
             { productId: 114, name: "Mando adicional", quantity: 2, price: 25000 },
             { productId: 115, name: "Juego digital", quantity: 1, price: 8900 },
           ],
-          status: "shipped",
+          status: "shipped" as const,
           date: new Date("2025-09-16"),
         },
         {
@@ -86,7 +94,7 @@ const arrayPedidos = () => {
           items: [
             { productId: 116, name: "Cámara réflex", quantity: 1, price: 210000 },
           ],
-          status: "delivered",
+          status: "delivered" as const,
           date: new Date("2025-09-17"),
         },
         {
@@ -96,7 +104,7 @@ const arrayPedidos = () => {
             { productId: 117, name: "Smartwatch", quantity: 1, price: 75000 },
             { productId: 118, name: "Correa adicional", quantity: 1, price: 6000 },
           ],
-          status: "pending",
+          status: "pending" as const,
           date: new Date("2025-09-18"),
         },
       ];
